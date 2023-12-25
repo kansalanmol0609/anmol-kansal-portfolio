@@ -2,8 +2,6 @@ import { Suspense, useRef } from "react";
 import { domAnimation, LazyMotion, useInView } from "framer-motion";
 import Link from "next/link";
 import { HeadingDivider, Loader } from "components";
-import Error from "../../error";
-import { ErrorBoundary } from "react-error-boundary";
 import { Projects } from "../../projects/components/Projects";
 import { SITE_ROUTES } from "../../../constants";
 import { PROJECTS } from "../../../constants/projects";
