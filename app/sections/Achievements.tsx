@@ -7,10 +7,6 @@ import { useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { HeadingDivider } from "components";
 
-//icons
-import { IoCalendarOutline } from "react-icons/io5";
-import { GrScorecard } from "react-icons/gr";
-
 export function AchievementsSection() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
@@ -35,11 +31,9 @@ export function AchievementsSection() {
 								<li className="mb-2">
 									Secured an All India Rank of 3743 in JEE Mains 2017 out of 1.3 Million students.
 								</li>
-								<li className="mb-2">CodeForces Max Rating1742 (Expert) </li>
-								<li className="mb-2">CodeChef Max Rating1890 (4 Star) </li>
-								<li className="mb-2">
-									Achieved 817 Global Rank in Google Kickstart Round B, 2020{" "}
-								</li>
+								<li className="mb-2">CodeForces Max Rating: 1742 (Expert) </li>
+								<li className="mb-2">CodeChef Max Rating: 1890 (4 Star) </li>
+								<li className="mb-2">Achieved 817 Global Rank in Google Kickstart Round B, 2020</li>
 							</ul>
 						</div>
 					</div>

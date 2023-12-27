@@ -19,7 +19,7 @@ export default function Page() {
 	return (
 		<div className="container-md">
 			<section id="projects" className="section">
-				<HeadingDivider title="Relevant projects" />
+				<HeadingDivider title="Projects" />
 
 				<Filter onClick={onClick} />
 

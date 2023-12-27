@@ -4,6 +4,7 @@ import { WelcomeSection, AboutSection, TechnologiesSection, ProjectsSection } fr
 import { ExperienceSection } from "./sections/Experience";
 import { EducationSection } from "./sections/Education";
 import { AchievementsSection } from "./sections/Achievements";
+import { BlogsSection } from "./sections/Blogs";
 
 export default function Page() {
 	return (
@@ -13,6 +14,7 @@ export default function Page() {
 			<TechnologiesSection />
 			<ExperienceSection />
 			<ProjectsSection />
+			<BlogsSection />
 			<EducationSection />
 			<AchievementsSection />
 		</div>

@@ -1,7 +1,7 @@
-import { Suspense, useRef } from "react";
+import { useRef } from "react";
 import { domAnimation, LazyMotion, useInView } from "framer-motion";
 import Link from "next/link";
-import { HeadingDivider, Loader } from "components";
+import { HeadingDivider } from "components";
 import { Projects } from "../../projects/components/Projects";
 import { SITE_ROUTES } from "../../../constants";
 import { PROJECTS } from "../../../constants/projects";
@@ -17,15 +17,7 @@ export function ProjectsSection() {
 				<div className="h-10 md:h-14" />
 
 				<div className="flex flex-col items-center gap-8 md:gap-14">
-					<Suspense
-						fallback={
-							<div className="flex-center">
-								<Loader />
-							</div>
-						}
-					>
-						<Projects projects={PROJECTS.slice(0, 3)} />
-					</Suspense>
+					<Projects projects={PROJECTS.slice(0, 3)} />
 
 					<Link
 						href={SITE_ROUTES.projects}
