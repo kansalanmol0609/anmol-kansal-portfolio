@@ -19,11 +19,11 @@ export function AppFooter() {
 					transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s"
 				}}
 			>
-				<div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-5">
+				<div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-5 ">
 					<ScrollTop />
 					<ConnectMedia />
 				</div>
-				<div className="text-center text-xs">
+				<div className="text-center text-xs mt-10">
 					Credit goes to{" "}
 					<a href="https://github.com/Infvyr/nextjs-portfolio" className="text-red-600">
 						Vasile Novatchii

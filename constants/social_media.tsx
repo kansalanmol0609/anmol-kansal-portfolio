@@ -1,4 +1,5 @@
 import { BsFillEnvelopeOpenFill, BsGithub, BsLinkedin } from "react-icons/bs";
+import { SiHashnode } from "react-icons/si";
 
 export const SOCIAL_MEDIA = [
 	{
@@ -12,6 +13,12 @@ export const SOCIAL_MEDIA = [
 		icon: <BsGithub />,
 		title: "Visit Github profile",
 		url: "https://github.com/kansalanmol0609"
+	},
+	{
+		id: "hashnode",
+		icon: <SiHashnode />,
+		title: "Send me an email",
+		url: "https://hashnode.com/@kansalanmol0609"
 	},
 	{
 		id: "mail",
