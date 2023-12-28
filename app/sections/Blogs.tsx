@@ -27,16 +27,16 @@ export const BlogsSection = () => {
 		fetch("https://gql.hashnode.com/", {
 			method: "POST",
 			body: JSON.stringify({
-				query: getPublicationsQuery(2)
+				query: getPublicationsQuery(2),
 			}),
 			headers: {
-				"Content-Type": "application/json"
-			}
+				"Content-Type": "application/json",
+			},
 		})
 			.then((res) => res.json())
 			.then((data) => {
 				setPosts(
-					data.data.publication?.posts?.edges?.map((post: { node: Post }) => post.node) as Post[]
+					data.data.publication?.posts?.edges?.map((post: { node: Post }) => post.node) as Post[],
 				);
 			});
 	});
@@ -64,8 +64,8 @@ export const BlogsSection = () => {
 						}
 					>
 						<ul className="pt-6">
-							{posts.map((post) => (
-								<BlogItem post={post} key={post.id} />
+							{posts.map((post, index) => (
+								<BlogItem post={post} key={post.id} index={index} />
 							))}
 						</ul>
 					</Suspense>
@@ -78,7 +78,7 @@ export const BlogsSection = () => {
 						className="btn"
 						style={{
 							transform: btnRef ? "none" : "translateX(-50px)",
-							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 						}}
 					>
 						<button aria-label="See more blogs">More Blogs</button>

@@ -14,15 +14,15 @@ export default async function BlogsPage() {
 	const data = await fetch("https://gql.hashnode.com/", {
 		method: "POST",
 		body: JSON.stringify({
-			query: getPublicationsQuery(10)
+			query: getPublicationsQuery(10),
 		}),
 		headers: {
-			"Content-Type": "application/json"
-		}
+			"Content-Type": "application/json",
+		},
 	}).then((res) => res.json());
 
 	const posts = data.data.publication.posts.edges.map(
-		(post: { node: Post }) => post.node
+		(post: { node: Post }) => post.node,
 	) as Post[];
 
 	return (
@@ -30,19 +30,11 @@ export default async function BlogsPage() {
 			<section id="blogs" className="section">
 				<HeadingDivider title="Blogs" />
 
-				<Suspense
-					fallback={
-						<div className="flex-center">
-							<Loader />
-						</div>
-					}
-				>
-					<ul className="py-10">
-						{posts.map((post) => (
-							<BlogItem post={post} key={post.id} />
-						))}
-					</ul>
-				</Suspense>
+				<ul className="py-10">
+					{posts.map((post, index) => (
+						<BlogItem post={post} key={post.id} index={index} />
+					))}
+				</ul>
 			</section>
 		</div>
 	);
