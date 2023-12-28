@@ -50,9 +50,6 @@ const EXPERIENCES = [
 		time: "May, 2020 - June, 2020",
 		company: "Sprinklr",
 		location: "Gurugram, India",
-		responsibilities: [
-			"Developed the Actions Config Builder tool to automate the generation of experience configs for message actions, significantly reducing the workload for both developers and testers and streamlining the configuration process (approx 20%)"
-		],
 		logo: "/assets/sprinklr_logo.jpeg"
 	}
 ];
@@ -86,7 +83,7 @@ export function ExperienceSection() {
 											<div className="text-md">{experience.role}</div>
 										</div>
 									</div>
-									<div className="flex flex-col justify-between">
+									<div className="hidden md:flex flex-col justify-between">
 										<div className="flex flex-row gap-2">
 											<IoCalendarOutline size={32} />
 											{experience.time}
@@ -98,11 +95,22 @@ export function ExperienceSection() {
 										</div>
 									</div>
 								</div>
+
+								<div className="flex flex-row gap-1 md:hidden">
+									<IoCalendarOutline size={32} />
+									{experience.time}
+								</div>
+								<div className="flex flex-row gap-1 md:hidden">
+									<IoLocationOutline size={32} />
+
+									{experience.location}
+								</div>
+
 								{experience.companyDescription ? (
 									<div className="text-md font-extralight">{experience.companyDescription} </div>
 								) : null}
 								<ul className="pl-6 list-disc">
-									{experience.responsibilities.map((desc) => (
+									{experience.responsibilities?.map((desc) => (
 										<li key={desc} className="mb-1">
 											{desc}
 										</li>

@@ -11,10 +11,10 @@ export default function Page() {
 		<div className="container-md">
 			<WelcomeSection />
 			<AboutSection />
+			<BlogsSection />
+			<ProjectsSection />
 			<TechnologiesSection />
 			<ExperienceSection />
-			<ProjectsSection />
-			<BlogsSection />
 			<EducationSection />
 			<AchievementsSection />
 		</div>

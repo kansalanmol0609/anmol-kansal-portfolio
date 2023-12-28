@@ -13,7 +13,7 @@ export const BlogItem = ({ post }: { post: Post }) => {
 				<div className="flex flex-col lg:flex-row items-start gap-6">
 					<div className="flex-1 flex flex-col gap-4">
 						<h2 className="text-3xl font-bold">{post.title}</h2>
-						<div className="flex text-sm gap-4 text-gray-300">
+						<div className="flex text-sm gap-4 dark:text-gray-300">
 							<span>
 								{new Date(post.publishedAt).toLocaleDateString(
 									undefined,
@@ -24,7 +24,7 @@ export const BlogItem = ({ post }: { post: Post }) => {
 							<span>{post.readTimeInMinutes} min read</span>
 							<span>{post.views} views</span>
 						</div>
-						<p className="text-gray-300">{post.brief}</p>
+						<p className="dark:text-gray-300">{post.brief}</p>
 					</div>
 
 					<img src={post.coverImage.url} alt={post.title} className="object-contain lg:w-3/6" />
