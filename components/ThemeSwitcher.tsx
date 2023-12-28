@@ -18,14 +18,25 @@ export const ThemeSwitcher = () => {
 		return null;
 	}
 
+	const toggleTheme = () => {
+		setTheme(currentTheme === "dark" ? "light" : "dark");
+	};
+
 	return (
 		<LazyMotion features={domAnimation}>
 			<m.button
-				onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+				onClick={toggleTheme}
+				onKeyDown={(e) => {
+					if (e.key === "Enter") {
+						toggleTheme();
+					}
+				}}
 				initial={initial}
 				animate={animate}
 				exit={exit}
 				transition={transition}
+				aria-label={`Toggle ${currentTheme === "dark" ? "light" : "dark"} theme`}
+				style={{ outline: "none" }}
 			>
 				{currentTheme === "dark" ? <BsSun /> : <BsMoon />}
 			</m.button>

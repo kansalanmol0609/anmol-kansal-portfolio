@@ -7,10 +7,10 @@ import { SOCIAL_MEDIA } from "../constants";
 export function ConnectMedia() {
 	return (
 		<LazyMotion features={domAnimation}>
-			<m.nav role="menu" initial={initial} animate={animate} exit={exit} transition={transition}>
-				<ul className="flex items-center gap-5">
+			<m.nav initial={initial} animate={animate} exit={exit} transition={transition}>
+				<ul className="flex items-center gap-5" role="menu">
 					{SOCIAL_MEDIA.map((item) => (
-						<li key={item.id}>
+						<li key={item.id} role="menuitem">
 							<a
 								href={item.url}
 								target="_blank"

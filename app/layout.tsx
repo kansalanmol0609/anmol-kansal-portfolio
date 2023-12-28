@@ -4,6 +4,10 @@ import Loading from "./loading";
 import "styles/globals.css";
 import { ThemeContext } from "context";
 
+export const metadata = {
+	title: `Anmol Kansal's Portfolio`,
+};
+
 export default function RootLayout({ children }: { children: JSX.Element }) {
 	return (
 		<html lang="en">

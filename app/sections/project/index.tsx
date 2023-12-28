@@ -22,16 +22,16 @@ export function ProjectsSection() {
 					<Link
 						href={SITE_ROUTES.projects}
 						tabIndex={-1}
-						aria-label="Go to projects page"
 						ref={btnRef}
 						className="btn"
 						style={{
 							transform: btnRef ? "none" : "translateX(-50px)",
 							opacity: isBtnInView ? 1 : 0,
-							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+							transition: "transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 						}}
+						aria-label="more projects"
 					>
-						<button aria-label="See more projects">More projects</button>
+						more projects
 					</Link>
 				</div>
 			</section>

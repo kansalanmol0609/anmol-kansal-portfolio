@@ -10,7 +10,7 @@ import { useMediaQuery } from "utils";
 const TEXT = [
 	"build interactive UI using React",
 	"develop websites using Next.js",
-	"like to solve challenging problems"
+	"like to solve challenging problems",
 ];
 
 export function WelcomeSection() {
@@ -48,7 +48,7 @@ export function WelcomeSection() {
 							style={{
 								transform: isInView ? "none" : "translateX(-200px)",
 								opacity: isInView ? 1 : 0,
-								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 							}}
 						>
 							<p>
@@ -64,7 +64,7 @@ export function WelcomeSection() {
 								style={{
 									transform: isInView ? "none" : "translateX(-200px)",
 									opacity: isInView ? 1 : 0,
-									transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+									transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 								}}
 							>
 								I
@@ -81,7 +81,7 @@ export function WelcomeSection() {
 												: count === 3
 												? "-300%"
 												: "0",
-										left: "13px"
+										left: "13px",
 									}}
 								>
 									{TEXT.map((element) => (
@@ -98,7 +98,7 @@ export function WelcomeSection() {
 							style={{
 								transform: isInView ? "none" : "translateX(-200px)",
 								opacity: isInView ? 1 : 0,
-								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 							}}
 						>
 							Stick around to see some of my work.
@@ -108,7 +108,7 @@ export function WelcomeSection() {
 							style={{
 								transform: isInView ? "none" : "translateY(50px)",
 								opacity: isInView ? 1 : 0,
-								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+								transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 							}}
 						>
 							<Link
@@ -116,7 +116,7 @@ export function WelcomeSection() {
 								onClick={onClick}
 								tabIndex={0}
 								className="btn"
-								aria-label="Latest projects"
+								aria-label="See my latest projects"
 							>
 								See my latest projects
 							</Link>
@@ -144,7 +144,7 @@ function TextElement({ element }: { element: string }) {
 			style={{
 				transform: isInView ? "none" : "translateX(-200px)",
 				opacity: isInView ? 1 : 0,
-				transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+				transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 			}}
 		>
 			{firstWord} {restWords}

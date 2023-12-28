@@ -14,9 +14,10 @@ export function ProjectItem({ project, index }: { index: number; project: Projec
 	const cardRef = useRef(null);
 	const isInView = useInView(cardRef, { once: true });
 
-	const galleryImages = images.map((img) => ({
+	const galleryImages = images.map((img, index) => ({
 		original: img,
-		loading: "lazy"
+		loading: "lazy",
+		originalAlt: `${title} - ${index}`,
 	}));
 
 	return (
@@ -28,7 +29,7 @@ export function ProjectItem({ project, index }: { index: number; project: Projec
 					? "none"
 					: `${index === 0 ? "translateY(250px)" : `translateY(${200 / index}px)`}`,
 				opacity: isInView ? 1 : 0,
-				transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${index === 0 ? 0 : 25 * index}ms`
+				transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${index === 0 ? 0 : 25 * index}ms`,
 			}}
 		>
 			<figure>

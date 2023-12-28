@@ -21,7 +21,13 @@ export function Menu({ onClick = () => {} }) {
 	};
 
 	mainMenu = (
-		<m.nav initial={initial} animate={animate} exit={exit} transition={transition} role="menu">
+		<m.nav
+			initial={initial}
+			animate={animate}
+			exit={exit}
+			transition={transition}
+			role="navigation"
+		>
 			<ul className="flex justify-center gap-5 flex-col md:flex-row items-start md:items-center">
 				{MENU_OPTIONS.map((menuItem) => (
 					<li key={menuItem.id}>

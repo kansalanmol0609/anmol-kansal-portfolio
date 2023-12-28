@@ -73,15 +73,15 @@ export const BlogsSection = () => {
 					<Link
 						href={SITE_ROUTES.blogs}
 						tabIndex={-1}
-						aria-label="Go to blogs page"
 						ref={btnRef}
 						className="btn"
 						style={{
 							transform: btnRef ? "none" : "translateX(-50px)",
-							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+							transition: "transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
 						}}
+						aria-label="more blogs"
 					>
-						<button aria-label="See more blogs">More Blogs</button>
+						more blogs
 					</Link>
 				</div>
 			</section>
